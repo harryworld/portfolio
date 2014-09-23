@@ -4,7 +4,9 @@ $(document).ready(function() {
     return '#' + Math.random().toString(16).slice(2, 8);
   }
 
-  $('#bgBtn').on("click", function() {
+  $('#bgBtn').on("click", function(event) {
+    event.preventDefault();
+
     console.log("Hello Harry!");
 
     $('.navbar').css('background', randomColor());
